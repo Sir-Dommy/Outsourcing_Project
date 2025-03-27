@@ -130,33 +130,39 @@
                         // gideonobasi2018@gmail.com
                         // KaziLink
 
-                        require 'PHPMailer\PHPMailer-master\src\Exception.php';
-                        require 'PHPMailer\PHPMailer-master/src/PHPMailer.php';
-                        require 'PHPMailer\PHPMailer-master/src/SMTP.php';
-
-                        $email = new PHPMailer(true);
-
-                        $email -> isSMTP();
-                        $email -> Host = 'smtp.gmail.com';
-                        $email -> SMTPAuth = true;
-                        $email -> Username = 'gideonobasi2018@gmail.com';
-                        $email -> Password = 'bekafupknhulxytc';
-                        $email -> SMTPSecure = 'ssl';
-                        $email -> Port = 465;
-
-                        $email -> setFrom('gideonobasi2018@gmail.com');
-
-                        $email -> addAddress($email2);
-                        $email -> isHTML(true);
-
-                        $email -> Subject = 'Verification Email';
-                        $email -> Body = 'Your OTP is: '.$OTP;
-
-                        $email -> send();
-        
-                        header('location: verifyEmail.php');
-                        exit();
+                        try{
+                            require 'PHPMailer\PHPMailer-master\src\Exception.php';
+                            require 'PHPMailer\PHPMailer-master/src/PHPMailer.php';
+                            require 'PHPMailer\PHPMailer-master/src/SMTP.php';
     
+                            $email = new PHPMailer(true);
+    
+                            $email -> isSMTP();
+                            $email -> Host = 'smtp.gmail.com';
+                            $email -> SMTPAuth = true;
+                            $email -> Username = 'gideonobasi2018@gmail.com';
+                            $email -> Password = 'bekafupknhulxytc';
+                            $email -> SMTPSecure = 'ssl';
+                            $email -> Port = 465;
+    
+                            $email -> setFrom('gideonobasi2018@gmail.com');
+    
+                            $email -> addAddress($email2);
+                            $email -> isHTML(true);
+    
+                            $email -> Subject = 'Verification Email';
+                            $email -> Body = 'Your OTP is: '.$OTP;
+    
+                            $email -> send();
+            
+                            header('location: verifyEmail.php');
+                            exit();
+        
+                        }
+                        catch(Exception $e){                            
+                            echo "<script> alert('We have this error!' . $e); </script>";
+                        }
+                        
                     }
                     else{
                         echo "Sorry an error occurred";
