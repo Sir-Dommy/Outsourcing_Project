@@ -130,7 +130,7 @@ class footer extends HTMLElement {
  connectedCallback(){
         this.innerHTML =`<nav class="navbar bg-dark">
         <a class="navbar-brand text-light btn btn-dark" href="index.php">
-                <img src="logo.jpg" alt="Logo" width="30rem" height="24"> <b>Arrow Outsourcing</b>
+                <img src="logo.jpg" alt="Logo" width="30rem" height="24"> <b>KaziLink</b>
                 </a>
             <div class="container bg-dark">
                 <div class="card m-1 border-0 bg-dark" style="width: 30rem;">

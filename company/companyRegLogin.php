@@ -77,12 +77,12 @@ $OTP = subStr(session_id(),0,6);
                             $email -> isSMTP();
                             $email -> Host = 'smtp.gmail.com';
                             $email -> SMTPAuth = true;
-                            $email -> Username = 'dominickyengo2017@gmail.com';
-                            $email -> Password = 'htbasuadyapohlun';
+                            $email -> Username = 'gideonobasi2018@gmail.com';
+                            $email -> Password = 'bekafupknhulxytc';
                             $email -> SMTPSecure = 'ssl';
                             $email -> Port = 465;
 
-                            $email -> setFrom('dominickyengo2017@gmail.com');
+                            $email -> setFrom('gideonobasi2018@gmail.com');
 
                             $email -> addAddress($email1);
                             $email -> isHTML(true);
@@ -144,7 +144,7 @@ $OTP = subStr(session_id(),0,6);
     <nav class="navbar bg-light">
         <div class="container">
             <a class="navbar-brand" href="../index.php">
-                <img src="logo.jpg" alt="Logo" width="30rem" height="24"> <b>Arrow Outsourcing</b>
+                <img src="logo.jpg" alt="Logo" width="30rem" height="24"> <b>KaziLink</b>
             </a>
    <!-- Button to trigger applicant login pop up page -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">

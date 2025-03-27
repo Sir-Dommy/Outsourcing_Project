@@ -32,12 +32,12 @@ if(isset($_POST['resendOTP']) || $_SESSION['prev'] == 'resetPassword'){
             $email -> isSMTP();
             $email -> Host = 'smtp.gmail.com';
             $email -> SMTPAuth = true;
-            $email -> Username = 'dominickyengo2017@gmail.com';
-            $email -> Password = 'htbasuadyapohlun';
+            $email -> Username = 'gideonobasi2018@gmail.com';
+            $email -> Password = 'bekafupknhulxytc';
             $email -> SMTPSecure = 'ssl';
             $email -> Port = 465;
 
-            $email -> setFrom('dominickyengo2017@gmail.com');
+            $email -> setFrom('gideonobasi2018@gmail.com');
 
             $email -> addAddress($email1);
             $email -> isHTML(true);
@@ -127,7 +127,7 @@ if(isset($_POST['continue'])){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Arrow Outsourcing</title>
+    <title>KaziLink</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   </head>
   <body>
@@ -135,7 +135,7 @@ if(isset($_POST['continue'])){
     <nav class="navbar bg-light">
         <div class="container overflow-auto">
             <a class="navbar-brand" href="../index.php">
-            <img src="logo.jpg" alt="Logo" width="30rem" height="24"> <b>Arrow Outsourcing</b>
+            <img src="logo.jpg" alt="Logo" width="30rem" height="24"> <b>KaziLink</b>
             </a>
    
         </div>
