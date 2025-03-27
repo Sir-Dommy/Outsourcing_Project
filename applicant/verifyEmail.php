@@ -24,17 +24,21 @@ if(isset($_POST['resendOTP']) || $_SESSION['prev'] == 'resetPassword'){
             require 'PHPMailer\PHPMailer-master/src/PHPMailer.php';
             require 'PHPMailer\PHPMailer-master/src/SMTP.php';
 
+            // bekafupknhulxytc
+            // gideonobasi2018@gmail.com
+            // KaziLink
+
             $email = new PHPMailer(true);
 
             $email -> isSMTP();
             $email -> Host = 'smtp.gmail.com';
             $email -> SMTPAuth = true;
-            $email -> Username = 'dominickyengo2017@gmail.com';
-            $email -> Password = 'htbasuadyapohlun';
+            $email -> Username = 'gideonobasi2018@gmail.com';
+            $email -> Password = 'bekafupknhulxytc';
             $email -> SMTPSecure = 'ssl';
             $email -> Port = 465;
 
-            $email -> setFrom('dominickyengo2017@gmail.com');
+            $email -> setFrom('gideonobasi2018@gmail.com');
 
             $email -> addAddress($email1);
             $email -> isHTML(true);
