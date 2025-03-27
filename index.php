@@ -41,7 +41,7 @@ session_destroy();
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Arrow Outsourcing</title>
+    <title>KaziLink</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   </head>
   <body>
@@ -49,7 +49,7 @@ session_destroy();
         <nav class="navbar bg-light">
         <div class="container overflow-auto">
             <a class="navbar-brand" href="">
-            <img src="logo.jpg" alt="Logo" width="30rem" height="24"> <b>Arrow Outsourcing</b>
+            <img src="logo.jpg" alt="Logo" width="30rem" height="24"> <b>KaziLink</b>
             </a>
    
             <a class="navbar-brand" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Apply" href="applicant\applicantRegLogin.php">Apply for Jobs</a>
@@ -62,7 +62,7 @@ session_destroy();
                 <!-- <div class="col-lg-1"> -->
                     <div class="card m-2 mt-5 border-0" style="width: 38rem;" style="height: 40rem;">
                             <div class="card-body">
-                                <h1 class="card-title mt-5">Welcome to Arrow Outsourcing!</h1>
+                                <h1 class="card-title mt-5">Welcome to KaziLink!</h1>
                                 <p class="card-text">The best local outsourcing website for IT specialists.</p>
                                 <a href="applicant\applicantRegLogin.php" class="btn btn-dark mt-5">Apply for Jobs</a> &#160; &#160;
                                 <a href="company\companyRegLogin.php" class="btn btn-primary mt-5">Hire IT experts</a>
@@ -74,7 +74,7 @@ session_destroy();
 
                     <!-- <div class="col-lg-1"> -->
                     <div class="card m-2 border-0" style="width: 42rem;" style="height: 40rem;">
-                        <img src="images/HomePic.jpg" class="card-img-top" alt="Arrow Outsourcing" height="390rem">
+                        <img src="images/HomePic.jpg" class="card-img-top" alt="KaziLink" height="390rem">
                             <div class="card-body">
                                 <h5 class="card-title">We allow you to explore the skills and experience of who you hire.</h5>
                             </div>
@@ -241,7 +241,7 @@ session_destroy();
                   
                 <div class="card m-4 border-1" style="width: 20rem;">
                     <div class="card-body">
-                        <p><i>"I recieved payment for my first project thanks Arrow Outsourcing"</i></p>
+                        <p><i>"I recieved payment for my first project thanks KaziLink"</i></p>
                         <figcaption class="blockquote-footer mb-0">
                             Sir Dommy
                         </figcaption>

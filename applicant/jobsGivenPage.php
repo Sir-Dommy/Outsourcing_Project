@@ -86,7 +86,7 @@ $jobId = substr($key,4);
     <nav class="navbar bg-light">
         <div class="container mb-2">
             <a class="navbar-brand" href="../../index.php">
-                <img src="logo.jpg" alt="Logo" width="30rem" height="24"> <b>Arrow Outsourcing</b>
+                <img src="logo.jpg" alt="Logo" width="30rem" height="24"> <b>KaziLink</b>
             </a>
         </div>
     </nav>
