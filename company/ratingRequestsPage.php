@@ -61,8 +61,8 @@ $mysqli = new mysqli('localhost', 'root', '', 'outsourcing');
                                     <b>Job Id: </b> $rows[0] <br>
                                     <b>Job Title: </b> $rows2[2] <br>
                                     <b>Applicant Email: </b> $rows[2] <br>
-                                    <b>Issue: </b> $rows[6] <br>
-                                    <b>Date Posted </b> $rows[7] <br>
+                                    <b>Issue: </b> $rows[5] <br>
+                                    <b>Date Posted </b> $rows[6] <br>
 
                                     <a class='btn btn-primary mt-2' href='mailto:$rows[2]'>Reply Via Mail</a>
                                 </p>

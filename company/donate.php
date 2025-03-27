@@ -1,5 +1,7 @@
 <?php
 
+$result = php_inpu
+
 session_start();
 // echo session_id();
 $mysqli = new mysqli('localhost', 'root', '', 'outsourcing');
@@ -61,9 +63,9 @@ if(isset($_POST['submit'])){
 
   date_default_timezone_set('Africa/Nairobi');
 
-  # access token from Sir Dommy app in daraja
-  $consumerKey = 'afYnYW76TbogjR73FblxiZaMQrZbBXX8'; //confidential consumer key from sandbox app (daraja)
-  $consumerSecret = '6EdoGFf1RLnhXwAJ'; // confidential consumer secret from sandbox app (daraja)
+  # access token from last app in daraja
+  $consumerKey = 'Jyx7JBQwzSDxNAY0zZUE3Ao8GOC4G2Dk'; //confidential consumer key from sandbox app (daraja)
+  $consumerSecret = 'CzeG2OAfJUGtX9OT'; // confidential consumer secret from sandbox app (daraja)
 
   # define the variales
   # provide the following details, found on test credentials on the developer account -- daraja
@@ -103,15 +105,29 @@ if(isset($_POST['submit'])){
   # callback url
   $CallBackURL = 'https://sir2.000webhostapp.com/callback_url.php';  
 
-  $curl = curl_init($access_token_url);
-  curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-  curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
-  curl_setopt($curl, CURLOPT_HEADER, FALSE);
-  curl_setopt($curl, CURLOPT_USERPWD, $consumerKey.':'.$consumerSecret);
-  $result = curl_exec($curl);
-  $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-  $result = json_decode($result);
-  $access_token = $result->access_token; 
+  // $curl = curl_init($access_token_url);
+  // curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+  // curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+  // curl_setopt($curl, CURLOPT_HEADER, FALSE);
+  // curl_setopt($curl, CURLOPT_USERPWD, $consumerKey.':'.$consumerSecret);
+  // $result = curl_exec($curl);
+  // $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+  // $result = json_decode($result);
+  // echo $result;
+  // $access_token = $result; 
+
+
+          $credentials = base64_encode($consumerKey.":".$consumerSecret);
+        $url = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array("Authorization: Basic ".$credentials));
+        curl_setopt($curl, CURLOPT_HEADER, false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        $curl_response = curl_exec($curl);
+        $res = json_decode($curl_response);
+        $access_token = $res->access_token;
   // $access_token = ""; 
   // if($result->access_token){
   // $access_token = $result->access_token;  

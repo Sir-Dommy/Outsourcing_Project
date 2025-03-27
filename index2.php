@@ -51,27 +51,4 @@
 </html>
 
 
-<?php
-  //  include("..\confirmation.php");
 
-        if(true){
-
-          // $file_content = file_get_contents($_FILES['file']['tmp_name']);
-
-          // echo $file_content;
-            $name = $_FILES['file']['name'];
-            $target_dir = "resumes/";
-            $target_file = $target_dir.$name ;
-            $tempfile = $_FILES['file']['tmp_name'];
-                if(move_uploaded_file($tempfile,$target_file)){
-                  echo "video inserted".sys_get_temp_dir();;
-                }
-                else{
-                    echo "failed to upload video";
-                }
-
-            
-        }
-       
-
-    ?>
